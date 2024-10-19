@@ -28,6 +28,7 @@ def menu_item(text: str, url: str) -> rx.Component:
         rx.hstack(
             rx.match(
                 text,
+                ("Home", menu_item_icon("layout-dashboard")),
                 ("Dashboard", menu_item_icon("layout-dashboard")),
                 ("About", menu_item_icon("book-open")),
                 ("Settings", menu_item_icon("settings")),
@@ -108,6 +109,7 @@ def menu_button() -> rx.Component:
         "/",
         "/about",
         "/settings",
+        "/home",
     ]
 
     # Get the decorated pages.
